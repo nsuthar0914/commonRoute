@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<title>Sample</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+		<style>
+			html, body {
+			  height: 100%;
+			  margin: 0;
+			  padding: 0;
+			}
+			#map-canvas {
+			  height: 85%;
+			  width: 100%;
+			}
+			#form {
+			  height: 15%;
+			  width: 100%;
+			  z-index: 100;
+			}
+		</style>
+	</head>
+   <body ng-app="myApp">
+	   	<div id="map-canvas"></div>
+   		<div ng-controller="MainController as MainCtrl">
+   			<form id="form" name="places" ng-submit="MainCtrl.getData(places)">
+   				<input name="start1" id="start1" placeholder="start1" />
+   				<input name="end1" id="end1" placeholder="end1" />
+   				<input name="start2" id="start2" placeholder="start2" />
+   				<input name="end2" id="end2" placeholder="end2" />
+   				<button type="submit">Submit</button>
+   			</form>
+   		</div>
+   </body>
+   <script type="text/javascript" src="combined_sample.js"></script>
+</html>
